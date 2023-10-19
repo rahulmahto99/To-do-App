@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  background: rgb(246, 244, 244);
+  font-family: sans-serif;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgb(246, 244, 244);
+  margin: 10px !important;
+}
+
+.to-do-app {
+  width: 400px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 15px 20px;
+  border-radius: 13px;
+}
+.to-do-app h2 {
+  display: flex;
+  margin-top: 20px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.to-do-app h2 img {
+  width: 30px;
+}
+
+.row input {
+  padding: 13px 25px;
+  width: fit-content;
+  outline: none;
+  border: none;
+  flex: 1;
+  background: rgb(244, 244, 244);
+  border-radius: 19px;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.row button {
+  outline: none;
+  border: none;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  cursor: pointer;
+  flex: 1;
+  color: white;
+  background-color: #ff5945;
+}
+.row button i {
+  font-weight: bold;
+  font-size: 15px;
+}
+#list-container {
+  padding: 20px 10px;
+  list-style-type: none;
+}
+
+#list-container li {
+  padding: 10px 30px;
+  list-style: none;
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+  font-weight: 600;
+  position: relative;
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-image: url(Assets/unchecked.png);
+  background-size: cover;
+  background-position: center;
+  top: 9px;
+  left: 1px;
+}
+
+ul li.checked {
+  color: #555;
+  text-decoration: line-through;
+}
+
+ul li.checked::before {
+  background-image: url(Assets/checked.png);
+}
+
+ul li span {
+  position: absolute;
+  right: 0;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  font-size: 20px;
+  color: #555;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+ul li span:hover {
+  background-color: #ff5945;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.4s;
+}
